@@ -135,7 +135,6 @@ class Character:
 
     def read_name(self, offset, size):
         raw_data = self.data[offset:offset + size]
-        # Decodifica il nome, rimuovendo caratteri non stampabili e null terminator
         name = "".join(s for s in raw_data.decode("ascii", errors="ignore") if s.isprintable())
         return name.strip("\x00") if name else None
 
