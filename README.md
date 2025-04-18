@@ -9,6 +9,8 @@ This project is a save editor for Monster Hunter Portable 3rd, designed to allow
 - Copy the folder named **mhp3rd_saveditor** wherever you want;
 - Put your savedata folder inside (ULJM05800) and launch the .exe;
 
+**PLEASE ALWAYS MAKE A BACKUP OF YOUR SAVEDATA**
+
 ![image](https://github.com/user-attachments/assets/27b694fb-2e90-4e99-9170-97c876467883)
 
 - After decrypting, you'll see a new window opening;
