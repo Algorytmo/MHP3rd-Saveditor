@@ -13,16 +13,15 @@ This project is a save editor for Monster Hunter Portable 3rd, designed to allow
 
 - After decrypting, you'll see a new window opening;
 
-![image](https://github.com/user-attachments/assets/09390f8f-acac-42f3-b19d-5ff547922a84)
+![image](https://github.com/user-attachments/assets/125e371d-e740-47dc-b1c8-9413e1e7a2fb)
 
-- You can now see your money, bag items and quantity; 
+- You can now see your money, bag/chest items and chest equip; 
 - Clicking on button **Add Max Money**, money will be capped at 9999999;
 - Double click on item quantity to edit it (max 99);
 - Double click on item name (or in an empty slot) to choose another item;
-- When you're done, click on **Save Changes** button and confirm; the tool will pack everything and encrypt all again;
+- Double click on item type and after on item name (or in an empty slot) to change equipment;
+- When you're done, click on **Save Changes** button and confirm. The tool will pack everything and encrypt all again;
 - When all windows will close, put your new savedata again in memorystick folder and start the game.
-
-![gif2](https://github.com/user-attachments/assets/cf6f83f4-229b-46cd-bb72-0a580122f8ab)
 
 **THANKS TO**
 
