@@ -2,7 +2,6 @@ import shutil
 import psp
 import os
 
-
 cwd = os.getcwd()
 main_savefile = os.path.join(cwd, "ULJM05800/MHP3RD.BIN")
 savedata = psp.SavedataCipher(6)
