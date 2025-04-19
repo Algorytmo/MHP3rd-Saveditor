@@ -75,34 +75,31 @@ def create_edit_window():
     edit_window = tk.Toplevel(root)
     edit_window.title("Edit Item")
     edit_window.iconbitmap(os.path.join(cwd, "data/icon.ico"))
+    edit_window.geometry("220x130")
     edit_window.grab_set()
     return edit_window
 
 def create_inventory_tree(parent_frame, label_text, inventory_data, columns, shared_db, inventory_type, character, all_equip_index=None):
     inventory_frame = tk.Frame(parent_frame)
     tk.Label(inventory_frame, text=label_text, font=("Arial", 12, "bold")).pack(pady=2)
-    
     tree_frame = tk.Frame(inventory_frame)
     tree = ttk.Treeview(tree_frame, columns=columns, show="headings", height=8)
     for col in columns:
         tree.heading(col, text=col)
-    
+        tree.column(col, width=120, anchor="center")  
     if inventory_type in ("item", "equip"):
-        scrollbar = ttk.Scrollbar(tree_frame, orient="vertical", command=tree.yview)
-        tree.configure(yscrollcommand=scrollbar.set)
+        y_scrollbar = ttk.Scrollbar(tree_frame, orient="vertical", command=tree.yview)
+        tree.configure(yscrollcommand=y_scrollbar.set)
         tree.grid(row=0, column=0, sticky='nsew')
-        scrollbar.grid(row=0, column=1, sticky='ns')
+        y_scrollbar.grid(row=0, column=1, sticky='ns')
         tree_frame.grid_rowconfigure(0, weight=1)
         tree_frame.grid_columnconfigure(0, weight=1)
     else:
         tree.pack(fill="both", expand=True)
-    
     tree_frame.pack(fill="both", padx=5)
-    
     for item in inventory_data:
         values = [item[column] for column in columns]
         tree.insert("", "end", values=values)
-    
     tree.character = character
     tree.inventory_type = inventory_type
     tree.bind("<Double-1>", lambda event: handle_double_click(event, tree, shared_db, all_equip_index))
@@ -194,6 +191,8 @@ def handle_double_click(event, tree, shared_db, all_equip_index=None):
 def create_edit_window():
     edit_window = tk.Toplevel(root)
     edit_window.title("Edit Item")
+    edit_window.iconbitmap(os.path.join(cwd, "data/icon.ico"))
+    edit_window.geometry("220x130")
     edit_window.grab_set()
     return edit_window
 
